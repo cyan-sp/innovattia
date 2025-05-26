@@ -34,9 +34,26 @@ CREATE TABLE IF NOT EXISTS employees (
     state VARCHAR(255),
     country VARCHAR(255)
 );
+```
 
 ### Empleados precargados 
 
 John Doe (Manager - ID: 1)
 ├── Jane Smith (Developer - ID: 2)
 └── Alice Johnson (Developer - ID: 3)
+
+
+## Construir imagen docker
+
+Construye la imagen Docker desde el directorio raíz del proyecto:
+
+```bash
+docker build -t innovattia-app .
+```
+
+
+Ejecuta la aplicacion :
+
+```bash
+docker run -p 8080:8080 innovattia-app
+```
