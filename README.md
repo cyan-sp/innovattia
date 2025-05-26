@@ -60,9 +60,6 @@ La consola de H2 está habilitada y puede accederse mientras la aplicación est�
 - **Contraseña**: *(dejar en blanco)*
 
 # Colección de Postman
-
-Este proyecto incluye una colección de Postman para probar los endpoints de la API.
-
 ## Endpoints de la API
 
 ### Obtener Empleados
