@@ -44,6 +44,21 @@ John Doe (Manager - ID: 1)
 └── Alice Johnson (Developer - ID: 3)
 ```
 
+## Base de Datos H2
+### Conexión a la Consola H2
+
+
+La consola de H2 está habilitada y puede accederse mientras la aplicación está en ejecución:
+
+
+- **URL de la consola**: `http://localhost:8080/h2-console`
+
+- **JDBC URL**: `jdbc:h2:mem:testdb`
+
+- **Usuario**: `sa`
+
+- **Contraseña**: *(dejar en blanco)*
+
 # Colección de Postman
 
 Este proyecto incluye una colección de Postman para probar los endpoints de la API.
