@@ -38,9 +38,11 @@ CREATE TABLE IF NOT EXISTS employees (
 
 ### Empleados precargados 
 
+```bash
 John Doe (Manager - ID: 1)
 ├── Jane Smith (Developer - ID: 2)
 └── Alice Johnson (Developer - ID: 3)
+```
 
 
 ## Construir imagen docker
