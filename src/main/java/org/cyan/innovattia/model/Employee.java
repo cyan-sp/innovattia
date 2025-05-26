@@ -19,9 +19,9 @@ public class Employee {
     private Address address;
 
     @OneToMany(mappedBy = "immediateBossId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Employee> subordinates; // Define the relationship
+    private List<Employee> subordinates;
 
-    // Getters and Setters
+
     public String getId() {
         return id;
     }

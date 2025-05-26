@@ -10,7 +10,7 @@ public class EmployeeDTO {
     private String position;
     private String immediateBossId;
     private AddressDTO address;
-    private List<EmployeeDTO> subordinates; // Add this line
+    private List<EmployeeDTO> subordinates;
 
     public String getId() {
         return id;
