@@ -1,12 +1,14 @@
 package org.cyan.innovattia.model;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "employees")
 public class Employee {
     @Id
     private String id;
+
     private String firstName;
     private String lastName;
     private String curp;
@@ -16,6 +18,10 @@ public class Employee {
     @Embedded
     private Address address;
 
+    @OneToMany(mappedBy = "immediateBossId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Employee> subordinates; // Define the relationship
+
+    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -70,5 +76,13 @@ public class Employee {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public List<Employee> getSubordinates() {
+        return subordinates;
+    }
+
+    public void setSubordinates(List<Employee> subordinates) {
+        this.subordinates = subordinates;
     }
 }

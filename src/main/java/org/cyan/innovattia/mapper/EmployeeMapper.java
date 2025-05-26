@@ -6,6 +6,9 @@ import org.cyan.innovattia.model.Employee;
 import org.cyan.innovattia.model.Address;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class EmployeeMapper {
     public EmployeeDTO toDTO(Employee employee) {
@@ -17,6 +20,7 @@ public class EmployeeMapper {
         dto.setPosition(employee.getPosition());
         dto.setImmediateBossId(employee.getImmediateBossId());
         dto.setAddress(toAddressDTO(employee.getAddress()));
+        dto.setSubordinates(toDTOList(employee.getSubordinates())); // Map subordinates
         return dto;
     }
 
@@ -29,6 +33,7 @@ public class EmployeeMapper {
         employee.setPosition(dto.getPosition());
         employee.setImmediateBossId(dto.getImmediateBossId());
         employee.setAddress(toAddress(dto.getAddress()));
+        employee.setSubordinates(toEntityList(dto.getSubordinates())); // Map subordinates
         return employee;
     }
 
@@ -54,5 +59,17 @@ public class EmployeeMapper {
         address.setState(dto.getState());
         address.setCountry(dto.getCountry());
         return address;
+    }
+
+    private List<EmployeeDTO> toDTOList(List<Employee> employees) {
+        return employees.stream()
+                .map(this::toDTO)
+                .collect(Collectors.toList());
+    }
+
+    private List<Employee> toEntityList(List<EmployeeDTO> employeeDTOs) {
+        return employeeDTOs.stream()
+                .map(this::toEntity)
+                .collect(Collectors.toList());
     }
 }

@@ -1,5 +1,7 @@
 package org.cyan.innovattia.dto;
 
+import java.util.List;
+
 public class EmployeeDTO {
     private String id;
     private String firstName;
@@ -8,6 +10,7 @@ public class EmployeeDTO {
     private String position;
     private String immediateBossId;
     private AddressDTO address;
+    private List<EmployeeDTO> subordinates; // Add this line
 
     public String getId() {
         return id;
@@ -15,6 +18,14 @@ public class EmployeeDTO {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public List<EmployeeDTO> getSubordinates() {
+        return subordinates;
+    }
+
+    public void setSubordinates(List<EmployeeDTO> subordinates) {
+        this.subordinates = subordinates;
     }
 
     public String getFirstName() {

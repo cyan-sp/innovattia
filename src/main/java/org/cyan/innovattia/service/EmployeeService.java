@@ -70,6 +70,11 @@ public class EmployeeService {
                 existingEmployee.getAddress().setCountry(employeeDTO.getAddress().getCountry());
             }
         }
+        if (employeeDTO.getSubordinates() != null) {
+            existingEmployee.setSubordinates(employeeDTO.getSubordinates().stream()
+                    .map(subordinateDTO -> employeeMapper.toEntity(subordinateDTO))
+                    .collect(Collectors.toList()));
+        }
 
         employeeRepository.save(existingEmployee);
         return employeeMapper.toDTO(existingEmployee);
