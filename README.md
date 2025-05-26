@@ -138,9 +138,6 @@ Este proyecto incluye una colección de Postman para probar los endpoints de la 
     }
     ```
 
-Esta sección proporciona una visión general completa de la colección de Postman y los endpoints de la API disponibles en tu proyecto. Puedes colocar esta sección después de la sección "Stack" en tu README.
-
-
 ## Construir imagen docker
 
 Construye la imagen Docker desde el directorio raíz del proyecto:
