@@ -48,14 +48,6 @@ John Doe (Manager - ID: 1)
 
 Este proyecto incluye una colección de Postman para probar los endpoints de la API.
 
-## Información de la Colección
-
-- **ID de Postman**: 85f39ef4-052b-4ce2-a448-5c9946ae2252
-- **Nombre**: Innovattia
-- **Esquema**: [Esquema de Colección de Postman](https://schema.getpostman.com/json/collection/v2.0.0/collection.json)
-- **ID del Exportador**: 43444216
-- **Enlace de la Colección**: [Ver Colección](https://cyan-1027480.postman.co/workspace/eaaa7e00-39a0-44d1-814a-d90ed75eaf2f/collection/43444216-85f39ef4-052b-4ce2-a448-5c9946ae2252?action=share&source=collection_link&creator=43444216)
-
 ## Endpoints de la API
 
 ### Obtener Empleados
